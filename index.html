@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="main.js"></script>
+    <style>
+        body {
+            background: rgb(43, 43, 43);
+        }
+
+        main {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            font-size: 32px;
+            padding: 10px 0;
+            border: 0;
+            box-shadow: 0 10px black;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            margin-top: 40px;
+            border-top: 2px black solid;
+        }
+
+        h1 {
+            padding: 16px;
+            float: left;
+            font-size: 32px;
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        input#decimalbox {
+            margin: 0;
+            float: left;
+            width: 50%;
+            display: inline-block;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 32px;
+            width: 25%;
+            float: left;
+            border: 0;
+            background: linear-gradient(45deg, rgb(228, 44, 75), rgb(223, 154, 27));
+            background-size: 200%;
+            background-position: center left;
+            color: white;
+            margin-bottom: 14px;
+            box-shadow: 0 10px black;
+            border-radius: 10px;
+            transition: .2s;
+        }
+
+        button:hover {
+            box-shadow: 0 8px black;
+            transform: translateY(2px);
+            background-position: center right;
+        }
+
+        button#equal {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <input type="text" id="displaybox">
+        <button onclick="document.getElementById('displaybox').value += '1'">1</button>
+        <button onclick="document.getElementById('displaybox').value += '2'">2</button>
+        <button onclick="document.getElementById('displaybox').value += '3'">3</button>
+        <button onclick="document.getElementById('displaybox').value += '4'">4</button>
+        <button onclick="document.getElementById('displaybox').value += '5'">5</button>
+        <button onclick="document.getElementById('displaybox').value += '6'">6</button>
+        <button onclick="document.getElementById('displaybox').value += '7'">7</button>
+        <button onclick="document.getElementById('displaybox').value += '8'">8</button>
+        <button onclick="document.getElementById('displaybox').value += '9'">9</button>
+        <button onclick="document.getElementById('displaybox').value += '0'">0</button>
+        <button onclick="document.getElementById('displaybox').value += '.'">.</button>
+        <button onclick="document.getElementById('displaybox').value += '+'">+</button>
+        <button onclick="document.getElementById('displaybox').value += '-'">-</button>
+        <button onclick="document.getElementById('displaybox').value += '*'">*</button>
+        <button onclick="document.getElementById('displaybox').value += '/'">/</button>
+        <button onclick="document.getElementById('displaybox').value += '('">(</button>
+        <button onclick="document.getElementById('displaybox').value += ')'">)</button>
+        <button onclick="solve()">=</button>
+        <button onclick="document.getElementById('displaybox').value = ''">C</button>
+        <button onclick="backspace()"><i class="fas fa-backspace"></i></button>
+        <input type="text" id="decimalbox" value="4">
+        <button onclick="setDecimal()" id="equal">Set Decimal</button>
+        <button onclick="back()" id="equal"><i class="fas fa-undo-alt"></i> Back</button>
+    </main>
+
+</body>
+
+</html>
